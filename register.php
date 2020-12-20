@@ -11,20 +11,19 @@ session_start();
     <title>Стена сообщений</title>
 </head>
 
-
 <body>
     <div class="container">
-        <form class="form-signin" method="POST" action="/message_wall/vendor/signin.php">
-            <h2>Войти</h2>
+        <form class="form-signin" method="POST" action="/message_wall/vendor/signup.php">
+            <h2>Регистрация</h2>
             <?php if (isset($_SESSION['message'])) { ?> <div class="alert alert-success" role="alert"><?php echo $_SESSION['message'];
                                                                                                         unset($_SESSION['message']); ?></div> <?php } ?>
             <input type="text" name="username" class="form-control" placeholder="username" required>
+            <input type="text" name="email" class="form-control" placeholder="e-mail" required>
             <input type="text" name="password" class="form-control" placeholder="password" required>
-            <button type="submit" class="btn btn-primary">Войти</button>
-            <a href="register.php" class="btn btn-primary">Зарегистрироваться</a>
+            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            <a href="index.php" class="btn btn-primary">Авторизироваться</a>
         </form>
     </div>
 </body>
-
 
 </html>
