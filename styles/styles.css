@@ -96,3 +96,9 @@
     max-width: 500px;
     margin: auto;
 }
+
+.table {
+    width: 540px;
+    margin: auto;
+    margin-bottom: 25px;
+}
