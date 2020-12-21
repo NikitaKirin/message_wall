@@ -19,7 +19,7 @@ if ($_SESSION['user']) {
     <div class="container">
         <form class="form-signin" method="POST" action="/message_wall/vendor/signin.php">
             <h2>Войти</h2>
-            <?php if (isset($_SESSION['message'])) { ?> <div class="alert alert-success" role="alert"><?php echo $_SESSION['message'];
+            <?php if (isset($_SESSION['message'])) { ?> <div class="alert alert-success" role="alert"><?php echo htmlspecialchars($_SESSION['message']);
                                                                                                         unset($_SESSION['message']); ?></div> <?php } ?>
             <input type="text" name="username" class="form-control" placeholder="username" required>
             <input type="text" name="password" class="form-control" placeholder="password" required>
