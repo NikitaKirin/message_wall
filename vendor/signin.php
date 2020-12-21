@@ -9,7 +9,7 @@ $STH->execute(array(':username' => $username, ':password' => $password));
 // $STH->setFetchMode(PDO::FETCH_ASSOC);
 $user = $STH->fetch(PDO::FETCH_ASSOC);
 $count = count($user);
-if ($count > 0) {
+if ($count > 1) {
     $_SESSION['user'] = [
         "id" => $user['id'],
         "name" => $user['username'],
@@ -20,3 +20,4 @@ if ($count > 0) {
     $_SESSION['message'] = "Неверный логин или пароль";
     header('Location: ../index.php');
 }
+?>
