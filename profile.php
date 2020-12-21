@@ -45,6 +45,8 @@ require './vendor/show_comments.php';
 
 <body>
     <table class="table table-hover">
+        <?php if (isset($_SESSION['message'])) { ?> <div class="alert alert-success" role="alert"><?php echo htmlspecialchars($_SESSION['message']);
+                                                                                                    unset($_SESSION['message']); ?></div> <?php } ?>
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -64,19 +66,13 @@ require './vendor/show_comments.php';
                     <td><?= $person['text'] ?></td>
                     <td><?= $person['date'] ?></td>
                     <td>
-                        <a href="" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
+                        <a href="?edit=<?= $person['id'] ?>" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal<?= $person['id'] ?>"><i class="fa fa-edit"></i></a>
 
-                        <a href="?delete=<?= $value['id'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="./vendor/delete.php?id=<?=$person['id']?>&date=<?=$person['date']?>" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <?php require './vendor/modal.php'; ?>
                     </td>
                 </tr>
                 </tr> <?php } ?>
-
-            <!-- <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr> -->
         </tbody>
     </table>
     <div class="container">
@@ -92,6 +88,8 @@ require './vendor/show_comments.php';
         </form>
     </div>
     <script type="text/javascript" src='js/main.js'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 
 
