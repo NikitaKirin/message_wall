@@ -38,17 +38,50 @@ if (!$_SESSION['user']) {
             <h2>Добро пожаловать, <?= htmlspecialchars($_SESSION['user']['name']) ?> !</h2>
             <p> Мы рады приветствовать вас на стене сообщений!
             </p>
-            <button class="btn btn-outline-secondary btn-lg">Перейти к стене сообщений</button> 
+            <button class="btn btn-outline-secondary btn-lg">Перейти к стене сообщений</button>
         </div>
     </div>
 </header>
 
 <body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <!-- <th scope="col">#</th> -->
+                <th scope="col">Имя</th>
+                <th scope="col">Сообщение</th>
+                <th scope="col">Дата</th>
+                <!-- <th scope="col">Действия</th> -->
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php
+            foreach ($_SESSION['comments'] as $person) { ?>
+                <tr>
+                    <th><?= $person['username'] ?></th>
+                    <th><?= $person['text'] ?></th>
+                    <th><?= $person['date'] ?></th>
+                </tr> <?php } ?>
+
+            <!-- <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr> -->
+        </tbody>
+    </table>
     <div class="container">
-        <form class="form-signin">
-            <h2><?= $_SESSION['user']['name'] ?></h2>
-            <p><?= $_SESSION['user']['email'] ?></p>
-            <a href="/message_wall/vendor/logout.php" class="btn btn-primary">Выход</a>
+        <form method="POST" action="/message_wall/vendor/log_comment.php">
+            <div class="form-group">
+                <?php if (isset($_SESSION['message'])) { ?> <div class="alert alert-success" role="alert"><?php echo htmlspecialchars($_SESSION['message']);
+                                                                                                            unset($_SESSION['message']); ?></div> <?php } ?>
+                <label for="exampleFormControlTextarea1">Оставьте свой комментарий!</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text_comment"></textarea>
+                <input type="hidden" name="page_id" value="150">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </div>
         </form>
     </div>
     <script type="text/javascript" src='js/main.js'></script>

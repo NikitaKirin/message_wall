@@ -86,3 +86,13 @@
     background: #F97300;
     color: #fff;
 }
+
+#commnets {
+    margin: auto;
+    max-width: 500px;
+}
+
+.form-group {
+    max-width: 500px;
+    margin: auto;
+}
