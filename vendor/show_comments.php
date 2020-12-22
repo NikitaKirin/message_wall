@@ -1,7 +1,7 @@
 <?php
 session_start();
 require "connect.php";
-$query = "SELECT comments.id, username, text, date FROM comments JOIN users ON comments.user_id = users.id";
+$query = "SELECT comments.id, username, text, date, user_id FROM comments JOIN users ON comments.user_id = users.id";
 // $STH = $DBH->query($query);
 // $STH->setFetchMode(PDO::FETCH_OBJ);
 // while ($row = $STH->fetch()) {

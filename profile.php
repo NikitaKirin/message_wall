@@ -68,7 +68,7 @@ require './vendor/show_comments.php';
                     <td>
                         <a href="?edit=<?= $person['id'] ?>" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal<?= $person['id'] ?>"><i class="fa fa-edit"></i></a>
 
-                        <a href="./vendor/delete.php?id=<?=$person['id']?>&date=<?=$person['date']?>" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="./vendor/delete.php?id=<?= $person['id'] ?>&date=<?= $person['date'] ?>&user_id=<?= $person['user_id'] ?>" class=" btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a>
                         <?php require './vendor/modal.php'; ?>
                     </td>
                 </tr>
