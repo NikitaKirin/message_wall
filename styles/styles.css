@@ -1,104 +1,115 @@
-.container .form-signin {
-    max-width: 400px;
-    margin: auto;
-}
-
-.form-control {
-    margin-top: 10px;
-}
-
-.btn-primary {
-    width: 100%;
-    margin-top: 10px;
-}
-
-.navbar-collapse {
-    justify-content: flex-end;
-}
-
-.navbar {
-    background: #F97300;
-}
-
-.nav-link,
-.navbar-brand {
-    color: #f4f4f4;
-    cursor: pointer;
-}
-
-.nav-link {
-    margin-right: 1em !important;
-}
-
-.nav-link:hover {
-    background: #f4f4f4;
-    color: #f97300;
-}
-
-.navbar-collapse {
-    justify-content: flex-end;
-}
-
-.navbar-toggler {
-    background: #fff !important;
-}
-
-.header {
-    background-image: url('../img/fon1.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
-.overlay {
-    position: absolute;
-    min-height: 100%;
-    min-width: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(244, 244, 244, 0.79);
-}
-
-.description {
-    position: absolute;
-    top: 30%;
-    margin: auto;
-    padding: 2em;
-}
-
-.description h1 {
-    color: #F97300;
-}
-
-.description p {
-    color: #666;
-    font-size: 20px;
-    width: 50%;
-    line-height: 1.5;
-}
-
-.navbar-brand {
-    margin-left: 15px;
-}
-
-.description button {
-    border: 1px solid #F97300;
-    background: #F97300;
-    color: #fff;
-}
-
-#commnets {
-    margin: auto;
-    max-width: 500px;
-}
-
-.form-group {
-    max-width: 500px;
-    margin: auto;
-}
-
-.table {
-    width: 540px;
-    margin: auto;
-    margin-bottom: 25px;
-}
+    .container .form-signin {
+        max-width: 400px;
+        margin: auto;
+    }
+    
+    .form-control {
+        margin-top: 10px;
+    }
+    
+    .btn-primary {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+    
+    .navbar {
+        background: #F97300;
+    }
+    
+    .nav-link,
+    .navbar-brand {
+        color: #f4f4f4;
+        cursor: pointer;
+    }
+    
+    .nav-link {
+        margin-right: 1em !important;
+    }
+    
+    .nav-link:hover {
+        background: #f4f4f4;
+        color: #f97300;
+    }
+    
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+    
+    .navbar-toggler {
+        background: #fff !important;
+    }
+    
+    .header {
+        background-image: url('../img/fon1.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .overlay {
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(244, 244, 244, 0.79);
+    }
+    
+    .description {
+        position: absolute;
+        top: 30%;
+        margin: auto;
+        padding: 2em;
+    }
+    
+    .description h1 {
+        color: #F97300;
+    }
+    
+    .description p {
+        color: #666;
+        font-size: 20px;
+        width: 50%;
+        line-height: 1.5;
+    }
+    
+    .navbar-brand {
+        margin-left: 15px;
+    }
+    
+    .description button {
+        border: 1px solid #F97300;
+        background: #F97300;
+        color: #fff;
+    }
+    
+    #commnets {
+        margin: auto;
+        max-width: 500px;
+    }
+    
+    .form-group {
+        max-width: 500px;
+        margin: auto;
+    }
+    
+    .table {
+        width: 540px;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+    
+    .alert {
+        position: relative;
+        padding: 1rem 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+        width: 540px;
+        margin: auto;
+        margin-top: 20px;
+    }

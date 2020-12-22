@@ -1,8 +1,8 @@
 <?php
 session_start();
 require_once 'connect.php';
-$username = $_POST['username'];
-$password = md5($_POST['password']);
+$username = htmlspecialchars($_POST['username']);
+$password = md5(htmlspecialchars($_POST['password']));
 $query = "SELECT * FROM users WHERE username = :username AND password = :password";
 $STH = $DBH->prepare($query, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 $STH->execute(array(':username' => $username, ':password' => $password));
@@ -17,7 +17,6 @@ if ($count > 1) {
     ];
     header('Location: ../profile.php');
 } else {
-    $_SESSION['message'] = "Неверный логин или пароль";
+    $_SESSION['fmessage'] = "Неверный логин или пароль";
     header('Location: ../index.php');
 }
-?>

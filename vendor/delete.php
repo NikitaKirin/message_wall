@@ -11,17 +11,17 @@ if ($user_id == $_SESSION['user']['id']) {
     if ($STH) {
         if ($STH) {
             $tmsg = "Сообщение успешно удалено";
-            $_SESSION['message'] = $tmsg;
-            header('Location: ../profile.php');
+            $_SESSION['tmessage'] = $tmsg;
+            header('Location: ../profile.php#table');
         } else {
             $fmsg = "Не удалось удалить сообщение";
-            $_SESSION['message'] = $fmsg;
-            header('Location: ../profile.php');
+            $_SESSION['fmessage'] = $fmsg;
+            header('Location: ../profile.php#table');
         }
     }
 }
 else{
     $fmsg = "Вы не можете удалить чужое сообщение";
-    $_SESSION['message'] = $fmsg;
-    header('Location: ../profile.php');
+    $_SESSION['fmessage'] = $fmsg;
+    header('Location: ../profile.php#table');
 }
