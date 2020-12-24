@@ -10,7 +10,7 @@ $date = new DateTime($date);
 $current_date = new DateTime($current_date);
 $interval = $date->diff($current_date);
 $diff =  (int)$interval->format('%h');
-if ($diff < 30) {
+if ($diff < 5) {
     if (!empty($edit_text) && $_SESSION['user']['id'] == $user_id) {
         $query = "UPDATE comments SET text = :text WHERE id = :id";
         $STH = $DBH->prepare($query);

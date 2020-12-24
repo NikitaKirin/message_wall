@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="./vendor/update.php?id=<?= $person['id'] ?>&user_id=<?= $person['user_id'] ?>" method="POST">
+                <form action="./vendor/update.php?id=<?= $person['id'] ?>&user_id=<?= $person['user_id'] ?>&date=<?=$person['date']?>" method="POST">
                     <div class="form-group">
                         <input type="text" class="form-control" name="text" placeholder="Сообщение">
                     </div>
