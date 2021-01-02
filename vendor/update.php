@@ -9,7 +9,7 @@ $current_date = date("Y-m-d H:i:s", time());
 $date = new DateTime($date);
 $current_date = new DateTime($current_date);
 $interval = $date->diff($current_date);
-$diff =  (int)$interval->format('%h');
+$diff =  (int)$interval->format('%I');
 if ($diff < 5) {
     if (!empty($edit_text) && $_SESSION['user']['id'] == $user_id) {
         $query = "UPDATE comments SET text = :text WHERE id = :id";
